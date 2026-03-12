@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS ventas(
+    id SERIAL PRIMARY KEY,
+    producto_id INTEGER,
+    cantidad INTEGER,
+    total FLOAT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
