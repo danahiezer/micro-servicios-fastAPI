@@ -10,7 +10,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s" # --> formato de como se vera log
 )
 
-app = FastAPI() # --> crea framework motor fastAPI
+app = FastAPI() # --> crea framework motor fastAPI (inicializando la app para utilizarlo)
 
 fallos = 0          # cuenta los fallos consecutivos
 circuito_abierto = False    # si True, no intenta consultar
