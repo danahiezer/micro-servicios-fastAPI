@@ -8,7 +8,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"  # --> el formato en el que se va a ver mi log
 )
 
-app = FastAPI() # --> creacion del framework con motor fastAPI
+app = FastAPI() # --> creacion del framework con motor fastAPI (inicializando la app para utilizarlo)
 
 token = "dan321" # --> llave o clave secreta para mi servicio
 
