@@ -4,4 +4,4 @@ nombre VARCHAR (100),
 precio NUMERIC (10,2),
 stock INTEGER
 )
-SELECT * FROM 
+SELECT * FROM productos
