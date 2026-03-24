@@ -8,7 +8,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s" # --> es el formato para ese log
 )
 
-app = FastAPI()  # --> la creacion de framework con motor fastAPI
+app = FastAPI()  # --> la creacion de framework con motor fastAPI (inicializando la app para utilizarlo)
 
 token = "dan123" # --> llave o clave secreta que mi servidor reconoce
 
@@ -19,7 +19,7 @@ conn = psycopg2.connect(
     password="dan"
 )
 # verifica el token
-def verificaToken(authorization: str = Header()): 
+def verificaToken(authorization: str = Header()): # --> recibe header authorization de manera automatica. fastapi al ver header() busca ese valor en los hedears de esa request
     try:
         clave = authorization.split(" ")[1] # --> debide el token en una lista usando espacios y el [1] es el segundo elemento (token)
         jwt.decode(clave,token,algorithms=["HS256"]) # --> verifica que coincida la firma y si no jwt.decode lo rechaza
